@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BannerView.h"
+
 
 @interface ViewController ()
 
@@ -16,13 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    BannerView * view = [[BannerView alloc] initWithFrame:self.view.bounds];
+    NSArray * arr = @[@"ed_user_guide1@middle",@"ed_user_guide2@middle",@"ed_user_guide3@middle",@"ed_user_guide4@middle"];
+    view.imageArr = arr;
+    [self.view addSubview:view];
 }
 
 
